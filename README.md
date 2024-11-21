@@ -1,1 +1,1 @@
-# hate-speech-annotation
+# Politeness Annotation Guide
