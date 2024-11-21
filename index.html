@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hate Speech Annotation Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('general-rules')">General Rules</a></li>
+                <li><a href="#" onclick="showSection('examples')">Examples</a></li> <!-- New Examples menu link -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Introduction Section -->
+        <section id="home" class="active">
+            <h2>Welcome to the Politeness Annotation Guide</h2>
+
+            <br>
+
+            <div class="box">
+            <h3>Introduction</h3>
+            <p> <span class="highlight">Politeness </span>  which can be defined as acting so as to take into account the feelings of others is key to human interactions, smoothing communication and social interaction.
+            </p> 
+            </div>
+            
+            <div class="box">
+            <h3>Annotation Process Overview</h3>
+            <div style="text-align: center">
+            <img src="images/proceso_de_anotacion.jpg" style="width: 50%;">
+            </div>
+
+            <li><strong> Step 1:  Evaluate the level of politeness:</strong> 
+                For each sentence, the annotator must determine the level of politeness of the sentence. For this he/she must answer: 
+                <span class="highlight">What do you consider to be the level of politeness of the sentence?</span>
+                 
+            <li> <strong>Step 2: Filter sentences: </strong> Researchers filter out statements that can be paraphrased as more polite or less polite. </li>
+            <li> <strong>Step 3: Paraphrase the sentence </strong> For each sentence, the annotator must  re-write a <span class="highlight"> less polite  </span> version of the sentence and a <span class="highlight">  more polite  </span> version of the sentence. </li>
+            <br>
+            </div>
+            
+            <div class="box">
+            
+            <h3> Evaluate the level of politeness Task (AGREGAR UN SCREENSHOT ACA)</h3>
+            
+            <div style="text-align: center">
+                <img src="images/ner4.gif" alt="NER Annotation Platform Example" class="example-image" style="width: 50%;">
+            </div>
+
+            <p> Each sentence should be evaluated independently and should be paraphrased as naturally as possible, trying to modify only the level of politeness of the sentence and not the meaning of the sentence.
+            </p>
+           
+        </div>
+
+        <div class="box">
+            
+            <h3> Paraphrase the sentence Task (AGREGAR UN SCREENSHOT ACA)</h3>
+            
+            <div style="text-align: center">
+                <img src="images/ner4.gif" alt="NER Annotation Platform Example" class="example-image" style="width: 50%;">
+            </div>
+
+            <p> Each sentence should be evaluated independently and should be paraphrased as naturally as possible, trying to modify only the level of politeness of the sentence and not the meaning of the sentence.
+            </p>
+           
+        </div>
+
+        </section>
+
+        <!-- General Rules Section -->
+        <section id="general-rules">
+            <div class="box">
+                <h2>General Rules</h2>
+                <p><strong>Positive</strong>, <strong>negative</strong>, and <strong>multi-word</strong> rules that apply to all mention labels, including general spelling rules.</p>
+        
+                <!-- Positive Rules Box -->
+                <div class="rule-box">
+                    <h3>Positive Rules</h3>
+                    <p>Rules that specify strategies that can be used in paraphrasing:</p>
+                    <ul>
+                        <li>When paraphrasing, natural language must be used, so the use of emojis, abbreviations or expressions used in informal contexts is permitted. </li>
+                        <li>It is possible to add expressions in the first person to include the speaker's opinion even when the original sentence is in the second person. As seen in example 1 and 2 when adding “I think” or “I suggest”.</li>
+                        <li>Expressions of gratitude can be included if the context allows it, for example “I appreciate”.</li>
+                        <li>Expressions of apology can be included if the context requires it. As seen in example 1 when adding “Sorry to bother you”.</li>
+                        <li>It is possible to change the verbal mode of the sentence. As seen in example 3 when changing "Could you send me" to " Can you send me .."</li>
+
+                    </ul>
+                </div>
+        
+                <!-- Negative Rules Box -->
+                <div class="rule-box">
+                    <h3>Negative Rules</h3>
+                    <p>Rules that specify strategies that cannot be used when paraphrasing or actions that are not allowed:</p>
+                    <ul>
+                        <li>The use of vulgar language or insults is not permitted. This type of vocabulary falls into the category of hate speech, which is outside the scope of this study.</li>
+                        <li> The repeated use of the same strategy should be avoided. For example, adding “Thanks” or “Please” to the end of all sentences.</li>
+                        <li> Overly wordy paraphrases that differ greatly from the length of the original example should be avoided. </li>
+                    </ul>
+                </div>
+
+        </section>
+
+            <!-- Examples Section -->
+            <section id="examples">
+                <h2>Examples</h2> 
+                <br> 
+                
+                <div class="example-buttons-container">
+                    <div class="example-buttons">
+                        <button onclick="scrollToExampleSection('general-rules-examples')">📋 General Rules</button>
+                        <button onclick="scrollToExampleSection('nested-entities-examples')">🎭 Nested Entities</button>
+                    </div>
+                </div>
+                
+                <div id="general-rules-examples" class="box example-box toggle-section">
+                    <h3>📋 General Rules</h3>
+                    <div class="example-section">
+                        <div class="correct-examples">
+                            <h4>Correct Examples</h4>
+                            <p>  <strong> "You should read the document by tomorrow"  </strong></p>
+                            <ul>
+                                <li>
+                                    
+                                    <p>  <span class="hate-annotation" data-label="1° person start "> I think </span>  it <span class="hate-annotation" data-label="Counterfactual modal"> would </span> be great if you could read the document by tomorrow. </p>
+                                    <div class="reasoning" style="display: none;">
+                                        <strong>Reasoning:</strong>
+                                        <ul>
+                                            <li>The span should include only the relevant word without punctuation or special characters.</li>
+                                            <li>The full phrase "white people" is labeled, not just "white".</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>I would <span class="hate-annotation" data-label="gratitude"> appreciate </span> it if you <span class="hate-annotation" data-label="Counterfactual modal">  could </span>read the document by tomorrow. </p>
+                                    
+                                    <div class="reasoning" style="display: none;">
+                                        <strong>Reasoning:</strong>
+                                        <ul>
+                                            <li>The full phrase "narcisissistic sociopath" is labeled.</li>
+                                            <li>This captures the complete group mention without ambiguity.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+        
+
+                            </ul>
+                        </div>
+                        <div class="wrong-examples">
+                            <h4>Wrong Examples</h4>
+                            <ul>
+                                <li>
+                                    <p>"After charlotesville do defenders know about <span class="hate-annotation" data-label="G-ETHNICITY">white people ?</span>"</p>
+                                    <p>"After charlotesville do defenders know about <span class="hate-annotation" data-label="G-ETHNICITY">white</span> people ?"</p>
+                                    <p>"Rashard Wright is an <span class="hate-annotation" data-label="I-ETHNICITY">antiwhite</span> extremist at #wearebschools he actively promotes"</p>
+                                    <div class="reasoning" style="display: none;">
+                                        <strong>Reasoning:</strong>
+                                        <ul>
+                                            <li>The question mark should not be included in the span.</li>
+                                            <li>The full phrase "white people" should be labeled, not just "white".</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>"ATF , it's good though but unfortunately <span class="hate-annotation" data-label="I-DISSABILITY">nacisssistic</span>  sociopaths do not change"</p>
+                                    <div class="reasoning" style="display: none;">
+                                        <strong>Reasoning:</strong>
+                                        <ul>
+                                            <li>Only "narcissistic" is labeled, which is incomplete.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                
+                                <li>
+                                    <p>"Who chose not to serve lesbans and ngers in the context of elections."</p>
+                                    <div class="reasoning" style="display: none;">
+                                        <strong>Reasoning:</strong>
+                                        <ul>
+                                            <li>If words have spelling mistakes they should be labeled.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toggle-container">
+                        <a href="#" class="toggle-reasoning" onclick="toggleReasoning(this); return false;">Show reasoning</a>
+                    </div>
+                    <!-- <button onclick="scrollToTop()" class="back-to-top">⬆️ Back to Top</button> -->
+                </div>
+
+  
+
+
+                <div id="nested-entities-examples" class="box example-box">
+                    <h3>🎭 Nested Entities</h3>
+                    <p>If there are two annotations in the same span, annotate both of them nested.</p>
+                    <div class="example-section">
+                        <div class="correct-examples">
+                            <h4>Correct Example</h4>
+                            <img src="images/correct_nested.png" alt="Correct nested entities example" class="example-image"/>
+                            <div class="reasoning" style="display: none;">
+                                <strong>Reasoning:</strong>
+                                <ul>
+                                    <li>"Arabs" is correctly labeled as G-ETHNICITY.</li>
+                                    <li>The entire phrase "Arabs [f**] slowly like turtles" is labeled as COMPARISON.</li>
+                                    <li>This nested annotation captures both the specific group mentioned and the comparative statement about them.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="wrong-examples">
+                            <h4>Wrong Examples</h4>
+                            <div class="wrong-examples-grid">
+                                <div class="wrong-example">
+                                    <img src="images/wrong_nested1.png" alt="Incorrect nested entities example 1" class="example-image"/>
+                                    <div class="reasoning" style="display: none;">
+                                        <strong>Reasoning:</strong>
+                                        <ul>
+                                            <li>Only the COMPARISON label is annotated, covering the entire phrase.</li>
+                                            <li>The G-ETHNICITY label for "Arabs" is missing, losing the specific ethnic reference.</li>
+                                            <li>This annotation fails to show the nested nature of the entities.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="wrong-example">
+                                    <img src="images/wrong_nested2.png" alt="Incorrect nested entities example 2" class="example-image"/>
+                                    <div class="reasoning" style="display: none;">
+                                        <strong>Reasoning:</strong>
+                                        <ul>
+                                            <li>Both G-ETHNICITY and COMPARISON labels are present, but not nested.</li>
+                                            <li>The COMPARISON label doesn't cover the entire relevant phrase.</li>
+                                            <li>This separate labeling misses the hierarchical relationship between the entities.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="wrong-example">
+                                    <img src="images/wrong_nested3.png" alt="Incorrect nested entities example 3" class="example-image"/>
+                                    <div class="reasoning" style="display: none;">
+                                        <strong>Reasoning:</strong>
+                                        <ul>
+                                            <li>Only the G-ETHNICITY label for "Arabs" is annotated.</li>
+                                            <li>The COMPARISON label is missing entirely.</li>
+                                            <li>This annotation loses the broader context of the comparative statement about the ethnic group.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="toggle-container">
+                        <a href="#" id="toggle-nested-reasoning" class="toggle-reasoning" onclick="toggleNestedReasoning(); return false;">Show reasoning</a>
+                    </div>
+                    <!-- <button onclick="scrollToTop()" class="back-to-top">⬆️ Back to Top</button> -->
+                </div>
+
+            </section>
+    </main>
+
+    <script  src="index.js"> </script>
+</body>
+</html>
