@@ -13,7 +13,7 @@
         <nav>
             <ul>
                 <li><a href="#" onclick="showSection('home')">Home</a></li>
-                <li><a href="#" onclick="showSection('general-rules')">General Rules</a></li>
+                <li><a href="#" onclick="showSection('general-rules')">General Rules positives </a></li>
                 <li><a href="#" onclick="showSection('examples')">Examples</a></li> <!-- New Examples menu link -->
             </ul>
         </nav>
@@ -120,16 +120,16 @@
                 
                 <div class="example-buttons-container">
                     <div class="example-buttons">
-                        <button onclick="scrollToExampleSection('general-rules-examples')">📋 General Rules</button>
-                        <button onclick="scrollToExampleSection('nested-entities-examples')">🎭 Nested Entities</button>
+                        <button onclick="scrollToExampleSection('general-rules-examples')"> ✅ Positive General Rules </button>
+                        <button onclick="scrollToExampleSection('nested-entities-examples')"> ⛔ Negative General Rules </button>
                     </div>
                 </div>
                 
                 <div id="general-rules-examples" class="box example-box toggle-section">
-                    <h3>📋 General Rules</h3>
+                    <h3> ✅  Positive General Rules</h3>
                     <div class="example-section">
                         <div class="correct-examples">
-                            <h4>Correct Examples</h4>
+                            <h4> More polite paraphrase </h4>
                             <p>  <strong> "You should read the document by tomorrow"  </strong></p>
                             <ul>
                                 <li>
@@ -138,8 +138,8 @@
                                     <div class="reasoning" style="display: none;">
                                         <strong>Reasoning:</strong>
                                         <ul>
-                                            <li>The span should include only the relevant word without punctuation or special characters.</li>
-                                            <li>The full phrase "white people" is labeled, not just "white".</li>
+                                            <li> The original sentence is not very polite since it is an order given to another person. As a strategy we find that it is addressed in the 2nd person and using counterfactual mode </li>
+                                            <li> Paraphrasing is more polite since it is presented as a suggestion. The strategies found are beginning in the first person and the use of counterfactual mode. </li>
                                         </ul>
                                     </div>
                                 </li>
@@ -149,17 +149,41 @@
                                     <div class="reasoning" style="display: none;">
                                         <strong>Reasoning:</strong>
                                         <ul>
-                                            <li>The full phrase "narcisissistic sociopath" is labeled.</li>
-                                            <li>This captures the complete group mention without ambiguity.</li>
+                                            <li>The paraphrase is more polite since it includes a gesture of deference at the beginning and the counterfactual mood is used.</li>
                                         </ul>
                                     </div>
                                 </li>
+
+                                <li>
+                                    
+                                    <p>  <span class="hate-annotation" data-label="Counterfactual modal"> Could you  </span>  <span class="hate-annotation" data-label="“Please”"> please </span> read the document by tomorrow? </p>
+                                    <div class="reasoning" style="display: none;">
+                                        <strong>Reasoning:</strong>
+                                        <ul>
+            
+                                            <li> Paraphrasing is more polite since it is presented as a question in counterfactual mode. In addition, the strategy of adding "please" is used. </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    
+                                    <p>  <span class="hate-annotation" data-label="Apologizing"> Sorry to bother you </span>  but <span class="hate-annotation" data-label="“1° person”"> I wonder </span> if you  <span class="hate-annotation" data-label="“Counterfactual modal”"> could  </span> read the document by tomorrow?  </p>
+                                    <div class="reasoning" style="display: none;">
+                                        <strong>Reasoning:</strong>
+                                        <ul>
+            
+                                            <li> Paraphrasing is more polite since it is presented as a question in counterfactual mode. Also it includes an apologizing at the beginning and asks about the possibility of performing the action instead of presenting it as an order. </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
         
 
                             </ul>
                         </div>
                         <div class="wrong-examples">
-                            <h4>Wrong Examples</h4>
+                            <h4> More inpolite paraphrase</h4>
                             <ul>
                                 <li>
                                     <p>"After charlotesville do defenders know about <span class="hate-annotation" data-label="G-ETHNICITY">white people ?</span>"</p>
@@ -205,7 +229,7 @@
   
 
 
-                <div id="nested-entities-examples" class="box example-box">
+                <!-- <div id="nested-entities-examples" class="box example-box">
                     <h3>🎭 Nested Entities</h3>
                     <p>If there are two annotations in the same span, annotate both of them nested.</p>
                     <div class="example-section">
@@ -260,9 +284,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="toggle-container">
+                    <div class="toggle-container"> 
                         <a href="#" id="toggle-nested-reasoning" class="toggle-reasoning" onclick="toggleNestedReasoning(); return false;">Show reasoning</a>
-                    </div>
+                    </div> -->
                     <!-- <button onclick="scrollToTop()" class="back-to-top">⬆️ Back to Top</button> -->
                 </div>
 
