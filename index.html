@@ -13,7 +13,7 @@
         <nav>
             <ul>
                 <li><a href="#" onclick="showSection('home')">Home</a></li>
-                <li><a href="#" onclick="showSection('general-rules')">General Rules positives </a></li>
+                <li><a href="#" onclick="showSection('general-rules')">General Rules </a></li>
                 <li><a href="#" onclick="showSection('examples')">Examples</a></li> <!-- New Examples menu link -->
             </ul>
         </nav>
@@ -121,7 +121,7 @@
                 <div class="example-buttons-container">
                     <div class="example-buttons">
                         <button onclick="scrollToExampleSection('general-rules-examples')"> ✅ Positive General Rules </button>
-                        <button onclick="scrollToExampleSection('nested-entities-examples')"> ⛔ Negative General Rules </button>
+                        <button onclick="scrollToExampleSection('negative-rules-examples')"> ⛔ Negative General Rules </button>
                     </div>
                 </div>
                 
@@ -184,35 +184,46 @@
                         </div>
                         <div class="wrong-examples">
                             <h4> More inpolite paraphrase</h4>
+                            <p>  <strong> "I would appreciate it if you could send me the paint samples."  </strong></p>
                             <ul>
                                 <li>
-                                    <p>"After charlotesville do defenders know about <span class="hate-annotation" data-label="G-ETHNICITY">white people ?</span>"</p>
-                                    <p>"After charlotesville do defenders know about <span class="hate-annotation" data-label="G-ETHNICITY">white</span> people ?"</p>
-                                    <p>"Rashard Wright is an <span class="hate-annotation" data-label="I-ETHNICITY">antiwhite</span> extremist at #wearebschools he actively promotes"</p>
+                                    <p> <span class="hate-annotation" data-label="Faculty">In fact</span>,  <span class="hate-annotation" data-label="2° person start"> you</span> have to send me the paintings</p>
                                     <div class="reasoning" style="display: none;">
                                         <strong>Reasoning:</strong>
                                         <ul>
-                                            <li>The question mark should not be included in the span.</li>
-                                            <li>The full phrase "white people" should be labeled, not just "white".</li>
+                                            <li>The sentence is less polite as it is presented as a direct order. </li>
+                                            <li>First-person comments and words of gratitude are ignored. </li>
                                         </ul>
                                     </div>
                                 </li>
                                 <li>
-                                    <p>"ATF , it's good though but unfortunately <span class="hate-annotation" data-label="I-DISSABILITY">nacisssistic</span>  sociopaths do not change"</p>
+                                    <p><span class="hate-annotation" data-label="Direct start"> So</span> , will you send me the paint samples or not?</p>
                                     <div class="reasoning" style="display: none;">
                                         <strong>Reasoning:</strong>
                                         <ul>
-                                            <li>Only "narcissistic" is labeled, which is incomplete.</li>
+                                            <li> The sentence is less polite as it is presented as a direct order. </li>
+                                            <li>First-person comments and words of gratitude are ignored. </li>
+                                            <li> The sentence is less friendly because it uses the indicative mood before the subjunctive. </li>
                                         </ul>
                                     </div>
                                 </li>
-                                
                                 <li>
-                                    <p>"Who chose not to serve lesbans and ngers in the context of elections."</p>
+                                    <p><span class="hate-annotation" data-label="please start"> Please</span> , send me the paint samples.</p>
                                     <div class="reasoning" style="display: none;">
                                         <strong>Reasoning:</strong>
                                         <ul>
-                                            <li>If words have spelling mistakes they should be labeled.</li>
+                                            <li> The use of please at the beginning of a sentence is considered... [complete] </li>
+                                            <li>First-person comments and words of gratitude are ignored. </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p> <span class="hate-annotation" data-label="indicative modal"> Can </span> you send me the paint samples?</p>
+                                    <div class="reasoning" style="display: none;">
+                                        <strong>Reasoning:</strong>
+                                        <ul>
+                                            <li> The sentence is less friendly because it uses the indicative mood before the subjunctive. </li>
+                                            <li>First-person comments and words of gratitude are ignored. </li>
                                         </ul>
                                     </div>
                                 </li>
@@ -288,6 +299,78 @@
                         <a href="#" id="toggle-nested-reasoning" class="toggle-reasoning" onclick="toggleNestedReasoning(); return false;">Show reasoning</a>
                     </div> -->
                     <!-- <button onclick="scrollToTop()" class="back-to-top">⬆️ Back to Top</button> -->
+
+
+
+                    <div id="negative-rules-examples" class="box example-box toggle-section">
+                        <h3> ⛔  Negative General Rules</h3>
+                        <div class="box">
+                            <h4> Original sentences </h4>
+
+                            <p>1. Can you help me carry these boxes upstairs?</p>
+
+                            <p>2. Can you watch my dog this weekend while I’m away?</p>
+
+                            <p>3. Can you give me a ride to the airport tomorrow morning?</p>
+
+                            <p>4. Can you review this document and provide your feedback?</p>
+
+                            <p>5. Can you water my plants while I’m on vacation?</p>
+
+                           
+                            <p>6. Can you pick up some groceries for me on your way home?</p>
+
+                            <p>7. Can you explain that concept to me one more time?</p>
+
+                            
+
+                        
+                        <div class="example-section">
+                            <div class="correct-examples">
+                                <h4>  ✅ Sentences with various strategies </h4>
+                                <p>1. Could you help me carry these boxes upstairs?</p>
+                                <p>2. Would you mind watching my dog this weekend?</p>
+                                
+                                
+                                <p>3. I would appreciate if you can give me a ride to the airport tomorrow morning?</p>
+                                <p>4. Could you review this document and give me your feedback?</p>
+                                <p>5. Would you be able to water my plants while I’m away?</p>
+                              
+                                <p>6. Could you pick up some groceries for me on your way home?</p>
+                                <p>7. Would you mind explaining that concept to me again?</p>
+                              
+                                <ul>
+                                
+    
+            
+    
+                                </ul>
+                            </div>
+                            <div class="wrong-examples">
+                                <h4> ⛔ Sentences that use only one strategy </h4>
+
+                                <p>1. Can you help me carry these boxes upstairs, please?</p>
+
+                                <p>2. Can you watch my dog this weekend while I’m away, please?</p>
+
+                                <p>3. Can you give me a ride to the airport tomorrow morning, please?</p>
+
+                                <p>4. Can you review this document and provide your feedback, please?</p>
+
+                                <p>5. Can you water my plants while I’m on vacation, please?</p>
+
+                               
+                                <p>6. Can you pick up some groceries for me on your way home, please?</p>
+
+                                <p>7. Can you explain that concept to me one more time, please?</p>
+
+                               
+                                </ul>
+                            </div>
+                        </div>
+                        </div>
+                        <!-- <button onclick="scrollToTop()" class="back-to-top">⬆️ Back to Top</button> -->
+                    </div>
                 </div>
 
             </section>
